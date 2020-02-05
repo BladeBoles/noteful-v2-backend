@@ -1,9 +1,8 @@
 const express = require('express');
 const xss = require('xss');
-const logger = require('../logger');
-const noteService = require('../bookmarks/noteService');
+const logger = require('../src/logger');
+const noteService = require('../notes/noteService');
 const noteRouter = express.Router();
-const folderRouter = require('folderRouter');
 const bodyParser = express.json();
 
 const serializeNote = note => ({
@@ -112,5 +111,5 @@ noteRouter
       .catch(next);
   });
 
-
+module.exports = noteRouter;
   
