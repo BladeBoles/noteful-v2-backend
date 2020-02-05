@@ -7,7 +7,7 @@ const bodyParser = express.json();
 
 const serializeFolder = folder => ({
   id: folder.id,
-  title: xss(folder.title)
+  folder_name: xss(folder.folder_name)
 });
 
 folderRouter
@@ -22,7 +22,7 @@ folderRouter
   })
 
   .post(bodyParser, (req, res, next) => {
-    for (const field of ['title', 'id']) {
+    for (const field of ['folder_name', 'id']) {
       if(!req.body[field]) {
         logger.error(`${field} is required`);
         return res.status(400).send({
@@ -31,9 +31,9 @@ folderRouter
       }
     }
 
-    const { title } = req.body;
+    const { folder_name } = req.body;
     const newFolder = {
-      title
+      folder_name
     };
 
 
@@ -88,14 +88,14 @@ folderRouter
   })
 
   .patch(bodyParser, (req, res, next) => {
-    const { title } = req.body;
-    const folderToUpdate = { title };
+    const { folder_name } = req.body;
+    const folderToUpdate = { folder_name };
     
     const numberOfValues = Object.values(folderToUpdate).filter(Boolean).length;
 
     if(numberOfValues === 0) {
       return res.status(400).json({
-        error: { message: `Request body must contain 'title'.`}
+        error: { message: `Request body must contain 'folder_name'.`}
       });
     }
 
