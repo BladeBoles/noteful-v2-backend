@@ -14,7 +14,7 @@ const serializeNote = note => ({
 });
 
 noteRouter
-  .route('/api/notes')
+  .route('/')
   .get((req, res, next) => {
     noteService.getAllNotes(req.app.get('db'))
       .then(notes => {
@@ -56,7 +56,7 @@ noteRouter
   });
 
 noteRouter
-  .route('/api/notes/:note_id')
+  .route('/:note_id')
   .all((req, res, next) => {
     const { note_id } = req.params;
     noteService.getById(req.app.get('db'), note_id)

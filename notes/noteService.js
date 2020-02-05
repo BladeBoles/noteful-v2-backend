@@ -34,3 +34,5 @@ const noteService = {
       .update(newData);
   }
 };
+
+module.exports = noteService;
