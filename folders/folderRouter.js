@@ -1,6 +1,6 @@
 const express = require('express');
 const xss = require('xss');
-const logger = require('../src/logger');
+
 const folderService = require('./folderService');
 const folderRouter = express.Router();
 const bodyParser = express.json();
@@ -24,7 +24,7 @@ folderRouter
   .post(bodyParser, (req, res, next) => {
     for (const field of ['folder_name']) {
       if(!req.body[field]) {
-        logger.error(`${field} is required`);
+        
         return res.status(400).send({
           error: { message: `${field} is required` }
         });
@@ -43,7 +43,7 @@ folderRouter
     )
 
       .then(folder => {
-        logger.info(`Folder with id ${folder.id} created.`);
+        
         res
           .status(201)
           .location(`/api/folders/${folder.id}`)
@@ -59,7 +59,7 @@ folderRouter
     folderService.getById(req.app.get('db'), folder_id)
       .then(folder => {
         if(!folder) {
-          logger.error(`Folder with id ${folder_id} not found.`);
+          
           return res.status(404).json({
             error: { message: `Folder with id ${folder_id} not found.`}
           });
@@ -81,7 +81,7 @@ folderRouter
       folder_id
     )
       .then(numRowsAffected => {
-        logger.info(`Folder with id ${folder_id} deleted.`);
+        
         res.status(204).end();
       })
       .catch(next);
