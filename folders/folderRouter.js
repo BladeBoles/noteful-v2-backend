@@ -22,7 +22,7 @@ folderRouter
   })
 
   .post(bodyParser, (req, res, next) => {
-    for (const field of ['folder_name', 'id']) {
+    for (const field of ['folder_name']) {
       if(!req.body[field]) {
         logger.error(`${field} is required`);
         return res.status(400).send({

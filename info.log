@@ -1,3 +1,50 @@
 {"message":"noteService.getAllNotes is not a function","level":"error"}
 {"message":"Cannot read property 'select' of undefined","level":"error"}
 {"message":"Cannot read property 'select' of undefined","level":"error"}
+{"message":"note_name is required","level":"error"}
+{"message":"folder_id is required","level":"error"}
+{"message":"folder_id is required","level":"error"}
+{"message":"folder_id is required","level":"error"}
+{"message":"folder_id is required","level":"error"}
+{"message":"folder_id is required","level":"error"}
+{"message":"folder_id is required","level":"error"}
+{"message":"folder_id is required","level":"error"}
+{"message":"folder_id is required","level":"error"}
+{"message":"folder_id is required","level":"error"}
+{"message":"folder_id is required","level":"error"}
+{"message":"folder_id is required","level":"error"}
+{"message":"folder_id is required","level":"error"}
+{"message":"folder_id is required","level":"error"}
+{"message":"folder_id is required","level":"error"}
+{"message":"Note with id 4 created.","level":"info"}
+{"message":"folder_id is required","level":"error"}
+{"message":"Note with id 5 created.","level":"info"}
+{"message":"Note with id 6 created.","level":"info"}
+{"message":"Note with id 6 deleted.","level":"info"}
+{"message":"Note with id 6 not found.","level":"error"}
+{"message":"Note with id 6 not found.","level":"error"}
+{"message":"Note with id 5 deleted.","level":"info"}
+{"message":"Note with id 4 deleted.","level":"info"}
+{"message":"Note with id 7 created.","level":"info"}
+{"message":"Note with id 7 deleted.","level":"info"}
+{"message":"folder_name is required","level":"error"}
+{"message":"folder_name is required","level":"error"}
+{"message":"folder_name is required","level":"error"}
+{"message":"Folder with id 4 created.","level":"info"}
+{"message":"Note with id 8 created.","level":"info"}
+{"message":"Note with id 8 deleted.","level":"info"}
+{"message":"Note with id 9 created.","level":"info"}
+{"message":"Note with id 9 deleted.","level":"info"}
+{"message":"Note with id 9 not found.","level":"error"}
+{"message":"Note with id 10 created.","level":"info"}
+{"message":"Note with id 10 deleted.","level":"info"}
+{"message":"Note with id 3 deleted.","level":"info"}
+{"message":"Note with id 11 created.","level":"info"}
+{"message":"Note with id 11 deleted.","level":"info"}
+{"message":"Note with id 2 deleted.","level":"info"}
+{"message":"Note with id 12 created.","level":"info"}
+{"message":"Note with id 12 deleted.","level":"info"}
+{"message":"Note with id 13 created.","level":"info"}
+{"message":"Note with id 13 deleted.","level":"info"}
+{"message":"Note with id 14 created.","level":"info"}
+{"message":"Note with id 14 deleted.","level":"info"}
