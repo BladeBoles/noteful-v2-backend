@@ -19,15 +19,9 @@ app.use(morgan(morganOption));
 app.use(helmet());
 app.use(cors());
 
-app.options('*', cors())
-
-
 app.use('/api/notes', noteRouter);
 app.use('/api/folders', folderRouter);
 
-app.get('/', (req, res) => {
-  res.send('Hello, world!');
-});
 
 app.use(errorHandler);
   
